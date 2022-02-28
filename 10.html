@@ -1,0 +1,24 @@
+//
+class Result { 
+    /* 
+    * Complete the 'ways' function below. 
+    * 
+    * The function is expected to return an INTEGER. 
+    * The function accepts following parameters: 
+    * 1. INTEGER total 
+    * 2. INTEGER k 
+    */ 
+    public static int ways(int total, int k) { 
+    int[] l = new int[total + 1]; 
+    l[0] = 1; 
+    for(int i = 1; i < k + 1; i++){ 
+    for(int j = 1; j < total + 1; j++){ 
+    if(j >= i){ 
+    l[j] = l[j] + l[j - i]; 
+    } 
+    } 
+    } 
+    return(l[total]); 
+    } 
+    }
+    

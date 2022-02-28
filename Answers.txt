@@ -1,0 +1,32 @@
+2. list.replaceAll(String::toUpperCase);
+3. list.sort(comparing(Person::getName));
+4. list.forEach(s-> System.out.println(s));
+5. Lambda expression enable functions to be passed as argument.
+6. Microservices Architecture utilizes independent Data Storage.
+7. You've selected a high-risk business critical capability to start the conversation with.
+8. spring-boot-starter-jdbc
+9. A, C and D.
+10. 
+
+class Result { 
+    /* 
+    * Complete the 'ways' function below. 
+    * 
+    * The function is expected to return an INTEGER. 
+    * The function accepts following parameters: 
+    * 1. INTEGER total 
+    * 2. INTEGER k 
+    */ 
+    public static int ways(int total, int k) { 
+    int[] l = new int[total + 1]; 
+    l[0] = 1; 
+    for(int i = 1; i < k + 1; i++){ 
+    for(int j = 1; j < total + 1; j++){ 
+    if(j >= i){ 
+    l[j] = l[j] + l[j - i]; 
+    } 
+    } 
+    } 
+    return(l[total]); 
+    } 
+    }
